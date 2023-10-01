@@ -1,15 +1,34 @@
 var storeImage = document.getElementById("store-image");
-var maxImagesCount = 5;
-var curCount = 2;
+var pathImage = document.getElementById("path-image")
+var maxStoreImages = 5;
+var maxPathImages = 5;
+var storeCount = 2;
+var pathCount = 2;
 
-function switchImage(val) {
-    curCount += val;
+var pathGuidance = [
 
-    if (curCount == 0) {
-        curCount = maxImagesCount;
+]
 
-    } else if (curCount > maxImagesCount) {
-        curCount = 1;
+function switchStoreImage(val) {
+    storeCount += val;
+
+    if (storeCount == 0) {
+        storeCount = maxStoreImages;
+
+    } else if (storeCount > maxStoreImages) {
+        storeCount = 1;
     }
-    storeImage.src = "images/store/store" + curCount + ".jpg";
+    storeImage.src = "images/store/store" + storeCount + ".jpg";
+}
+
+function switchPathImage(val) {
+    pathCount += val;
+
+    if (pathCount == 0) {
+        pathCount = maxPathImages;
+
+    } else if (pathCount > maxPathImages) {
+        pathCount = 1;
+    }
+    pathImage.src = "images/path/path" + pathCount + ".jpg";
 }

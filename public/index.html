@@ -9,7 +9,6 @@
     <meta name="description" content="Магазин париков Аметист-Парик" />
     <meta name="keywords" content="парики, шиньоны, пряди, магазин, Москва, Медведково" />
     <title>Аметист-Парик</title>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,16 +18,20 @@
         </section>
         <section class="info-panel">
             <nav>
-                <a class="nav-container">О нас</a>
-                <a class="nav-container">Как добраться</a>
-                <a class="nav-container phone-container" href="tel:+79850681520">8-985-068-15-20</a>
-                <a href="https://api.whatsapp.com/send?phone=+79850681520"> <img src="images/whatsapp-logo.svg"
-                        class="whatsapp-icon"> </a>
-                <a href="https://t.me/ametistparik"> <img src="images/telegram-logo.svg" class="general-icon"> </a>
-                <a href="https://yandex.ru/maps/-/CCUuyZw~GA"> <img src="images/google-maps-logo.svg"
-                        class="general-icon"> </a>
-                <a href="https://goo.gl/maps/2tpAJYtG5kMzypXa7"> <img src="images/yandex-maps.logo.svg"
-                        class="general-icon"> </a>
+                <div class="nav-info">
+                    <a class="nav-container">О нас</a>
+                    <a class="nav-container">Как добраться</a>
+                    <a class="nav-container phone-container" href="tel:+79850681520">8-985-068-15-20</a>
+                </div>
+                <div class="nav-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=+79850681520"> <img src="images/whatsapp-logo.svg"
+                            class="whatsapp-icon"> </a>
+                    <a href="https://t.me/ametistparik"> <img src="images/telegram-logo.svg" class="general-icon"> </a>
+                    <a href="https://yandex.ru/maps/-/CCUuyZw~GA"> <img src="images/yandex-maps.logo.svg"
+                            class="general-icon"> </a>
+                    <a href="https://goo.gl/maps/2tpAJYtG5kMzypXa7"> <img src="images/google-maps-logo.svg"
+                            class="general-icon"> </a>
+                </div>
             </nav>
             <h3 class="info-text">Часы работы: 11:00-19:00 пн.–пт., <br>
                 в выходные - по предварительной записи</h3>
@@ -115,9 +118,9 @@
         </div>
         <div class="gallery">
             <a class="store-container">
-                <img src="images/left-arrow.svg" class="left-arrow" onclick="switchImage(-1)">
+                <img src="images/left-arrow.svg" class="left-arrow" onclick="switchStoreImage(-1)">
                 <img src="images/store/store1.jpg" id="store-image">
-                <img src="images/right-arrow.svg" class="right-arrow" onclick="switchImage(1)">
+                <img src="images/right-arrow.svg" class="right-arrow" onclick="switchStoreImage(1)">
             </a>
         </div>
         <div class="main-description">
@@ -144,9 +147,18 @@
         <h2>Где нас найти</h2>
         <div class="main-description">
             <p>
-                Наш магазин находится недалеко от метро «Медведково», по адресу <u>Студеный проезд, д. 14, г. Москва</u>. Мы работаем с 10:00 до 19:00 с понедельника по пятницу.
+                Наш магазин находится недалеко от метро «Медведково», по адресу <u>Студеный проезд, д. 14, г.
+                    Москва</u>. Мы работаем с 10:00 до 19:00 с понедельника по пятницу.
                 До него можно легко добраться пройдя <strong>5 мин пешком</strong>.
             </p>
+        </div>
+        <h2>Как добраться</h2>
+        <div class="gallery">
+            <a class="store-container">
+                <img src="images/left-arrow.svg" class="left-arrow" onclick="switchPathImage(-1)">
+                <img src="images/path/path1.jpg" id="path-image">
+                <img src="images/right-arrow.svg" class="right-arrow" onclick="switchPathImage(1)">
+            </a>
         </div>
 
     </main>

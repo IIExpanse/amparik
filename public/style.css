@@ -1,10 +1,12 @@
 :root {
-    
+    --def-width: 100vw;
+    --def-height: 100vh;
 }
 
 html {
     background: linear-gradient(to right, #ECD2C9 0%, #fff0ea 100%);
-    height: 100%;
+    width: var(--def-width);
+    height: var(--def-height);
 }
 
 @font-face {
@@ -15,64 +17,76 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    width: inherit;
     margin: 0;
     padding: 0;
 }
 
 .banner-header {
     position: sticky;
-    height: 13em;
+    height: 15em;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    padding-top: 1em;
 }
 
 .banner {
     display: flex;
     background: linear-gradient(to right, #ff35bc 0%, #fbc2eb 100%);
-    height: 50%;
+    height: 30%;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-h1 { 
+h1 {
     font-family: Lobster;
-    font-size: 4em;
+    font-size: min(3em, 11vw);
     color: aliceblue;
 }
 
 h2 {
     font-family: Lobster;
-    font-size: 2em;
+    font-size: min(2em, 9vw);
     text-align: center;
     color: #AA2288;
     margin-block-start: 0.7em;
-    margin-block-end: 0;
+    margin-block-end: 0.5em;
     border-bottom: solid;
     margin-left: 1.5em;
     margin-right: 1.5em;
+    margin-top: 0;
 }
 
 h3 {
     font-family: Lobster;
-    font-size: 1.5em;
+    font-size: min(1.5em, 7vw);
     text-align: center;
     color: #FF33CC;
     margin-top: 0.3em;
 }
 
 .info-panel {
-    height: 50%;
+    height: 60%;
     background-color: white;
 }
 
 nav {
     height: 40%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+}
+
+.nav-info {
+    flex-direction: row;
+}
+
+.nav-buttons {
+    flex-direction: row;
+    margin-top: 0.5em;
 }
 
 a {
@@ -82,19 +96,19 @@ a {
 
 .whatsapp-icon {
     width: auto;
-    height: 40px;
+    height: min(35px, 10vw);
     margin-left: 0.1em;
 }
 
 .general-icon {
     width: auto;
-    height: 35px;
+    height: min(35px, 10vw);
     margin-left: 0.1em;
 }
 
 .nav-container {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: min(1em, 5vw);
     background: linear-gradient(to bottom, #fa74cd 0%, #f7e9f3 100%);
     border-radius: 1em;
     padding: 0.3em;
@@ -108,7 +122,7 @@ a {
 
 .info-text {
     font-family: Lobster;
-    font-size: 1.3em;
+    font-size: min(1.3em, 6vw);
     font-weight: lighter;
     text-align: center;
     color: #FF0000;
@@ -131,6 +145,7 @@ main {
     margin-right: 2em;
     overflow: hidden;
     object-fit: cover;
+    margin-bottom: 1em;
 }
 
 .wig-container {
@@ -160,34 +175,17 @@ label {
 }
 
 .wig-container input[type=checkbox]:checked~img {
+    --img-width: min(750px, 75%);
     cursor: zoom-out;
     position: absolute;
-    max-width: 30em;
+    max-width: var(--img-width);
     height: auto;
-}
-
-.store-container input[type=checkbox] {
-    display: none;
-}
-
-.store-container input[type=checkbox]:checked~img {
-    cursor: zoom-out;
-    position: absolute;
-    max-width: 30em;
-    height: auto;
-}
-
-.image-pointer {
-    cursor: pointer;
-    height: 5em;
-    width: auto;
-    position: relative;
-    align-self: center;
+    left: calc((var(--def-width) - var(--img-width)) / 2);
 }
 
 .right-arrow {
     cursor: pointer;
-    height: 5em;
+    height: 3em;
     width: auto;
     position: relative;
     align-self: center;
@@ -195,7 +193,7 @@ label {
 
 .left-arrow {
     cursor: pointer;
-    height: 5em;
+    height: 3em;
     width: auto;
     position: relative;
     align-self: center;
@@ -204,20 +202,21 @@ label {
 .gallery-wig {
     width: inherit;
     height: inherit;
-    overflow: visible;
 }
 
 #store-image {
-    width: 80%;
-    height: auto;
-    justify-self: center;
+    width: 75%;
+}
+
+#path-image {
+    width: 75%;
 }
 
 .main-description {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5em;
+    font-size: min(1.5em, 3vw);
     text-align: justify;
-    width: 35em;
+    width: min(40em, 90%);
     text-indent: 2em;
     line-height: 1.5em;
 }
