@@ -19,8 +19,8 @@
         <section class="info-panel">
             <nav>
                 <div class="nav-info">
-                    <a class="nav-container">О нас</a>
-                    <a class="nav-container">Как добраться</a>
+                    <a class="nav-container" href="#about">О нас</a>
+                    <a class="nav-container" href="#path-block">Как добраться</a>
                     <a class="nav-container phone-container" href="tel:+79850681520">8-985-068-15-20</a>
                 </div>
                 <div class="nav-buttons">
@@ -99,7 +99,7 @@
                 </label>
             </a>
         </div>
-        <h2>О магазине</h2>
+        <h2 id="about">О магазине</h2>
         <div class="main-description">
             <p>
                 Наш магазин работает более 20 лет. До недавнего открытия по новому адресу мы долгое время работали на
@@ -144,7 +144,7 @@
                 индивидуальность!
             </p>
         </div>
-        <h2>Где нас найти</h2>
+        <h2 id="path-block">Где нас найти</h2>
         <div class="main-description">
             <p>
                 Наш магазин находится недалеко от метро «Медведково», по адресу <u>Студеный проезд, д. 14, г.
@@ -153,12 +153,18 @@
             </p>
         </div>
         <h2>Как добраться</h2>
-        <div class="gallery">
-            <a class="store-container">
-                <img src="images/left-arrow.svg" class="left-arrow" onclick="switchPathImage(-1)">
-                <img src="images/path/path1.jpg" id="path-image">
-                <img src="images/right-arrow.svg" class="right-arrow" onclick="switchPathImage(1)">
-            </a>
+        <div class="path-card">
+            <div class="gallery path-gallery">
+                <a class="store-container">
+                    <img src="images/left-arrow.svg" class="left-arrow" onclick="switchPathImage(-1)">
+                    <img src="images/path/path1.jpg" id="path-image">
+                    <img src="images/right-arrow.svg" class="right-arrow" onclick="switchPathImage(1)">
+                </a>
+            </div>
+            <p class="main-description" id="path-text">
+                Выйдите на станции метро «Медведково».
+                <br>После выхода из поезда, поверните направо.
+            </p>
         </div>
 
     </main>
