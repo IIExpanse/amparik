@@ -1,6 +1,7 @@
 let storeImage = document.getElementById("store-image");
 let pathImage = document.getElementById("path-image")
 let pathText = document.getElementById("path-text")
+let popUpMod = document.getElementById("wig-popup")
 let maxStoreImages = 5;
 let maxPathImages = 5;
 let storeCount = 1;
@@ -42,86 +43,25 @@ function switchPathData(val) {
     pathText.innerText = pathDescription[pathCount - 1];
 }
 
+function disablePopUp() {
+    popUpMod.style.display = "none";
+}
+
+function enablePopUp(src) {
+    popUpMod.firstElementChild.src = src;
+    popUpMod.style.display = "block";
+}
+
 class WigCard {
-    #type;
-    #name;
-    #article;
-    #price;
-    #brand;
-    #color;
-    #available;
 
-    constructor(type, name, article, price, brand, color, available) {
-        this.#type = type;
-        this.#name = name;
-        this.#article = article;
-        this.#price = price;
-        this.#brand = brand;
-        this.#color = color;
-        this.#available = available;
-        this._type = type;
-        this._name = name;
-        this._article = article;
-        this._price = price;
-        this._brand = brand;
-        this._color = color;
-        this._available = available;
-    }
-
-
-    get type() {
-        return this._type;
-    }
-
-    set type(value) {
-        this._type = value;
-    }
-
-    get name() {
-        return this._name;
-    }
-
-    set name(value) {
-        this._name = value;
-    }
-
-    get article() {
-        return this._article;
-    }
-
-    set article(value) {
-        this._article = value;
-    }
-
-    get price() {
-        return this._price;
-    }
-
-    set price(value) {
-        this._price = value;
-    }
-
-    get brand() {
-        return this._brand;
-    }
-
-    set brand(value) {
-        this._brand = value;
-    }
-
-    get color() {
-        return this._color;
-    }
-
-    set color(value) {
-        this._color = value;
-    }
-
-    get available() {
-        return this._available;
-    }
-
-    set available(value) {
-        this._available = value;
+    constructor(type, name, article, price, brand, color, available, images) {
+        this.type = type;
+        this.name = name;
+        this.article = article;
+        this.price = price;
+        this.brand = brand;
+        this.color = color;
+        this.available = available;
+        this.images = images;
     }
 }

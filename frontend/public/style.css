@@ -1,12 +1,11 @@
 :root {
     --def-width: 100vw;
-    --def-height: 100vh;
+    --popup: none
 }
 
 html {
     background: linear-gradient(to right, #ECD2C9 0%, #fff0ea 100%);
     width: var(--def-width);
-    height: var(--def-height);
 }
 
 @font-face {
@@ -148,54 +147,42 @@ main {
     object-fit: cover;
 }
 
+#wig-popup {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000054;
+    top: 0;
+}
+
+#popup-image {
+    position: fixed;
+    --popup-width: min(800px, 90vw);
+    width: var(--popup-width);
+    height: auto;
+    left: calc((var(--def-width) - var(--popup-width)) / 2);
+    top: 4vh;
+}
+
 .wig-container {
     width: 100%;
     height: 100%;
     margin-left: 0.1em;
-}
-
-.store-container {
-    max-height: 30em;
-    width: auto;
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-}
-
-label {
-    width: inherit;
-    height: inherit;
-    cursor: zoom-in;
-    display: inherit;
-    justify-content: center;
-}
-
-.wig-container input[type=checkbox] {
-    display: none;
-}
-
-.wig-container input[type=checkbox]:checked~img {
-    --img-width: min(750px, 75%);
-    cursor: zoom-out;
-    position: absolute;
-    max-width: var(--img-width);
-    height: auto;
-    left: calc((var(--def-width) - var(--img-width)) / 2);
+    cursor: pointer;
 }
 
 .right-arrow {
     cursor: pointer;
-    height: 3em;
+    height: min(10vw, 3em);
     width: auto;
-    position: relative;
     align-self: center;
 }
 
 .left-arrow {
     cursor: pointer;
-    height: 3em;
+    height: min(10vw, 3em);
     width: auto;
-    position: relative;
     align-self: center;
 }
 
@@ -231,6 +218,14 @@ label {
 
 .path-gallery {
     margin: 0;
+}
+
+.store-container {
+    max-height: 30em;
+    width: auto;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
 }
 
 #path-text {

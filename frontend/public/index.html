@@ -24,8 +24,7 @@
                     <a class="nav-container phone-container" href="tel:+79850681520">8-985-068-15-20</a>
                 </div>
                 <div class="nav-buttons">
-                    <a href="https://wa.me/79850681520"> <img src="images/whatsapp-logo.svg"
-                            class="whatsapp-icon"> </a>
+                    <a href="https://wa.me/79850681520"> <img src="images/whatsapp-logo.svg" class="whatsapp-icon"> </a>
                     <a href="https://t.me/ametistparik"> <img src="images/telegram-logo.svg" class="general-icon"> </a>
                     <a href="https://yandex.ru/maps/-/CCUuyZw~GA"> <img src="images/yandex-maps.logo.svg"
                             class="general-icon"> </a>
@@ -43,61 +42,41 @@
             спрей для расчесывания в подарок!</h3>
         <div class="gallery">
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/20-1.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/20-1.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/25-2.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/25-2.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/26-2.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/26-2.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/30-1.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/30-1.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/31-1.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/31-1.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
         </div>
         <div class="gallery">
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/38-1.JPG" class="gallery-wig">
-                </label>
+                <img src="images/gallery/38-1.JPG" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/41-1.jpg" class="gallery-wig">
-                </label>
+                <img src="images/gallery/41-1.jpg" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/45-1.jpg" class="gallery-wig">
-                </label>
+                <img src="images/gallery/45-1.jpg" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
             <a class="wig-container">
-                <label>
-                    <input type="checkbox">
-                    <img src="images/gallery/46-1.jpg" class="gallery-wig">
-                </label>
+                <img src="images/gallery/46-1.jpg" class="gallery-wig" onclick="enablePopUp(src)">
             </a>
+        </div>
+        <div id="wig-popup" onclick="disablePopUp()">
+            <img src="images/gallery/20-1.JPG" id="popup-image" onclick="disablePopUp()">
+            <div>
+
+            </div>
+
         </div>
         <h2 id="about">О магазине</h2>
         <div class="main-description">
@@ -116,7 +95,7 @@
         <div class="gallery">
             <a class="store-container">
                 <img src="images/left-arrow.svg" class="left-arrow" onclick="switchStoreImage(-1)">
-                <img src="images/store/store1.jpg" id="store-image">
+                <img src="images/store/store1.jpg" id="store-image" onclick="enablePopUp(src)">
                 <img src="images/right-arrow.svg" class="right-arrow" onclick="switchStoreImage(1)">
             </a>
         </div>
@@ -145,7 +124,7 @@
         <div class="main-description">
             <p>
                 Наш магазин находится недалеко от метро «Медведково», по адресу <u>Студеный проезд, д. 14, г.
-                Москва</u>. Мы работаем с 10:00 до 19:00 с понедельника по пятницу.
+                    Москва</u>. Мы работаем с 10:00 до 19:00 с понедельника по пятницу.
                 До него можно легко добраться, пройдя от метро <strong>5 мин пешком</strong>.
             </p>
         </div>
@@ -154,7 +133,7 @@
             <div class="gallery path-gallery">
                 <a class="store-container">
                     <img src="images/left-arrow.svg" class="left-arrow" onclick="switchPathData(-1)">
-                    <img src="images/path/path1.jpg" id="path-image">
+                    <img src="images/path/path1.jpg" id="path-image" onclick="enablePopUp(src)">
                     <img src="images/right-arrow.svg" class="right-arrow" onclick="switchPathData(1)">
                 </a>
             </div>
